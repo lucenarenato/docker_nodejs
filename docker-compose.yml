@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+    # Aplicação
+    api:
+        container_name: "re-api"
+        restart: always
+        build: .
+        ports:
+            - ${PORT_APP}:${PORT_APP}
+        volumes:
+            - ./:/app/re_api
